@@ -21,7 +21,7 @@
         </commentGenerator>
         <!--数据库链接地址账号密码-->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost:3306/big_eater?characterEncoding=utf8" userId="root"
+                        connectionURL="jdbc:mysql://localhost:3306/big_eater?serverTimezone=UTC&amp;characterEncoding=utf8" userId="root"
                         password="root">
         </jdbcConnection>
         <!--类型处理器，在数据库类型和java类型之间的转换控制-->

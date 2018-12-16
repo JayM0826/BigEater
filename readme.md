@@ -5,3 +5,4 @@
 - https://blog.csdn.net/itguangit/article/details/78701110 json注解对于返回数据的使用
 - http://localhost:8080/druid druid连接池的状态
 - https://www.imooc.com/article/75232 SpringBoot 使用 Mybatis-Generator
+- https://my.oschina.net/gef/blog/712383 【真巨坑】使用连接 mysql 的 jdbc 驱动最新版引发的问题

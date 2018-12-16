@@ -33,7 +33,7 @@ public class JsonUtil {
         return mapper;
     }
 
-    public static <T> T deserializeObject(String jsonStr, TypeReference<T> type) {
+    public static <T> T from(String jsonStr, TypeReference<T> type) {
         T userData;
         try {
             userData = getMapper().readValue(jsonStr, type);
@@ -44,7 +44,7 @@ public class JsonUtil {
         }
     }
 
-    public static <T> List<T> deserializeJsonToList(String jsonStr, Class<T> clazz) {
+    public static <T> List<T> ToList(String jsonStr, Class<T> clazz) {
         List<T> list;
         try {
             list = getMapper().readValue(jsonStr, TypeFactory.defaultInstance().constructCollectionType(List.class, clazz));
@@ -61,7 +61,7 @@ public class JsonUtil {
         return userData;
     }
 
-    public static <T> T deserializeObject(String jsonStr, Class<T> clazz) {
+    public static <T> T from(String jsonStr, Class<T> clazz) {
         T userData;
         try {
             if (Strings.isNullOrEmpty(jsonStr)) {
@@ -75,7 +75,7 @@ public class JsonUtil {
         }
     }
 
-    public static Map<?, ?> deserializeObject(String jsonStr) {
+    public static Map<?, ?> from(String jsonStr) {
         Map<String, Object> userData;
         try {
             userData = getMapper().readValue(jsonStr, Map.class);

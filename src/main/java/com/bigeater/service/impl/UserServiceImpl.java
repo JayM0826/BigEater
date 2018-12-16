@@ -19,6 +19,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @PreDb(ctime = true)
     public UserPo addUser(UserPo userPo) {
+        userPo.setId(111111L);
         mapper.insert(userPo);
         return userPo;
     }
