@@ -1,0 +1,7 @@
+- https://blog.csdn.net/gfd54gd5f46/article/details/75022305 Spring Boot (教程八： 过滤器、监听器、拦截器)
+- http://blog.didispace.com/springbootswagger2/ Spring Boot 中使用 Swagger2 构建强大的 RESTful API 文档
+- http://www.cnblogs.com/DeepLearing/p/5663178.html logback 节点配置详解
+- http://localhost:8080/swagger-ui.html swagger本地测试
+- https://blog.csdn.net/itguangit/article/details/78701110 json注解对于返回数据的使用
+- http://localhost:8080/druid druid连接池的状态
+- https://www.imooc.com/article/75232 SpringBoot 使用 Mybatis-Generator
