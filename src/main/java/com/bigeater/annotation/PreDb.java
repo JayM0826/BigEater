@@ -16,4 +16,5 @@ public @interface PreDb {
     int paramIndex() default 0;
     boolean mtime() default true;
     boolean ctime() default false;
+    boolean id() default false;
 }

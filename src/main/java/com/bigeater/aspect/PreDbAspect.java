@@ -1,6 +1,7 @@
 package com.bigeater.aspect;
 
 import com.bigeater.annotation.PreDb;
+import com.bigeater.util.IdUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -21,13 +22,13 @@ import java.lang.reflect.Method;
 public class PreDbAspect {
 
     @Pointcut("@annotation(com.bigeater.annotation.PreDb)")
-    public void time() {
+    public void pre() {
     }
 
     /**
      * 前置通知
      */
-    @Before("time()")
+    @Before("pre()")
     public void doBeforeController(JoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
@@ -46,6 +47,12 @@ public class PreDbAspect {
             Field ctime = obj.getClass().getDeclaredField("ctime");
             ctime.setAccessible(true);
             ctime.set(obj, Long.valueOf(now));
+        }
+
+        if (action.id()) {
+            Field ctime = obj.getClass().getDeclaredField("id");
+            ctime.setAccessible(true);
+            ctime.set(obj, IdUtil.instance.nextId());
         }
     }
 
