@@ -6,8 +6,9 @@
 
     <properties resource="application.yml"/>
 
+    <!--TODO 这里修改为自己路径的jar-->
     <classPathEntry
-            location="C:/Users/哎呦哥哥的大土豆片子/IdeaProjects/zhuanzhuan_bookadmin/target/zhuanzhuan_bookadmin/WEB-INF/lib/mysql-connector-java-5.1.36.jar"/>
+            location="D:/repository/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar"/>
     <context id="DB2Tables" targetRuntime="MyBatis3" defaultModelType="flat">
         <!-- 覆盖生成 XML 文件 -->
         <!--https://github.com/mybatis/generator/tree/master/core/mybatis-generator-core/src/main/java/org/mybatis/generator/plugins-->
