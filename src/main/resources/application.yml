@@ -69,3 +69,31 @@ pagehelper:
     supportMethodsArguments: true
     params: count=countSql
     returnPageInfo: check
+
+
+## JWT 配置
+#jwt:
+#  # 存放Token的Header Key
+#  header: Authorization
+#  # 密匙key
+#  secret: mySecret
+#  # 过期时间   单位秒 7天后过期  604800
+#  expiration: 3600
+#  # 自定义token 前缀字符
+#  tokenHead: Bearer-
+#  # 超时时间   单位秒
+#  access_token: 3600
+#  # 刷新token时间   单位秒
+#  refresh_token: 3600
+#  route:
+#    authentication:
+#      path: login/entry
+#      refresh: oauth/refresh
+#      register: login/account
+#
+#
+#audience:
+#  clientId: 098f6bcd4621d373cade4e832627b4f6
+#  base64Secret: MDk4ZjZiY2Q0NjIxZDM3M2NhZGU0ZTgzMjYyN2I0ZjY=
+#  name: restapiuser
+#  expiresSecond: 172800

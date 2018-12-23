@@ -48,5 +48,7 @@
         </javaClientGenerator>
         <!--生成对应表及类名-->
         <!--<table tableName="user" domainObjectName="UserPo" ></table>-->
+        <table tableName="role" domainObjectName="RolePo" ></table>
+        <table tableName="user_role_relation" domainObjectName="UserRoleRelation" ></table>
     </context>
 </generatorConfiguration>

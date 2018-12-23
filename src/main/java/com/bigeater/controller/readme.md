@@ -1,0 +1,1 @@
+注意 所有的controller只能注入原子层(com.bigeater.atom.impl)里面的服务，不允许注入mapper

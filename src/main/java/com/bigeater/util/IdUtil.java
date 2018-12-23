@@ -1,7 +1,7 @@
 package com.bigeater.util;
 
 /**
- * 描述:
+ * 描述: 雪花算法 生成唯一id
  *
  * @author J
  * @create 2018-12-17 0:08
