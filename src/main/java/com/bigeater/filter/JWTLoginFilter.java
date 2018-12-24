@@ -47,6 +47,7 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
                     new UsernamePasswordAuthenticationToken(
                             user.getUsername(),
                             user.getPassword(),
+                            // TODO 这里是否可以查库，看一下角色
                             new ArrayList<>())
             );
         } catch (IOException e) {
@@ -64,8 +65,10 @@ public class JWTLoginFilter extends UsernamePasswordAuthenticationFilter {
         String token = Jwts.builder()
                 .setSubject(((org.springframework.security.core.userdetails.User) auth.getPrincipal()).getUsername())
                 .setExpiration(new Date(System.currentTimeMillis() + 60 * 60 * 24 * 1000))
+                // TODO secert可以对一个应用来说只有一个
                 .signWith(SignatureAlgorithm.HS512, "MyJwtSecret")
                 .compact();
+        // 将token放到header的授权信息中
         res.addHeader("Authorization", "Bearer " + token);
     }
 
