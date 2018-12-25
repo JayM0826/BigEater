@@ -13,10 +13,5 @@ public class DoNothingApplication {
         SpringApplication.run(DoNothingApplication.class, args);
     }
 
-    @Bean
-    public BCryptPasswordEncoder bCryptPasswordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
 }
 
